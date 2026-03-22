@@ -235,7 +235,7 @@ function App() {
             }
             className="reset-filters-btn"
           >
-            Reset filters ✕
+            Reset filters
           </button>
         </div>
 
