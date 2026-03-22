@@ -10,7 +10,7 @@ An elegant and high-performance cocktail discovery application built for the **S
 * 🍸 Filter by alcohol type, category or glass type
 * ❤️ Add / remove favorites
 * 🔁 Switch view between all cocktails and your favorites
-* 📑 Read all deatils of cocktails
+* 📑 Read all details of cocktails
 * 🖥️ Fully responsive design
 * 💰 Premium Bar Aesthetic
 
