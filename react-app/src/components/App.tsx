@@ -146,7 +146,14 @@ function App() {
     <div className="app-bg">
       <div className="container">
         <header className="header">
-          <h1>Koktajlownik🍹</h1>
+          <h1
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              setCurrentPage(1);
+            }}
+          >
+            Koktajlownik🍹
+          </h1>
           <input
             type="text"
             placeholder="Search cocktails..."
@@ -232,7 +239,7 @@ function App() {
           </button>
         </div>
 
-        {isLoading && <p className="text-center">Loading cocktails... 🧊</p>}
+        {isLoading && <p className="text-center">Loading cocktails...</p>}
         {isError && (
           <p className="text-center text-red-500">Connection error!</p>
         )}
@@ -247,7 +254,7 @@ function App() {
             <div className="no-results">
               <p>
                 {showFavoritesOnly && favorites.length === 0
-                  ? "You don't have any favorites yet 💔"
+                  ? "You don't have any favorites yet!"
                   : "No cocktails found matching your filters 🔍"}
               </p>
               <button onClick={resetFilters} className="clear-btn">

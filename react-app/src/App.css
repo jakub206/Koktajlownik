@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #302e2d;
   color: #e5e1da;
@@ -8,7 +12,7 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 20px 20px 40px 20px;
+  padding: 12px 8px 25px 8px;
   font-family: sans-serif;
   background-color: #302e2d;
   min-height: 100vh;
@@ -16,19 +20,18 @@ body {
 
 .header {
   text-align: center;
-  margin-bottom: 25px;
-  font-size: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
 }
 
 .filters {
   display: flex;
-  gap: 15px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
   background: linear-gradient(135deg, #3d3b3a 0%, #4a4847 100%);
-  padding: 25px;
-  border-radius: 12px;
+  padding: 12px;
+  border-radius: 10px;
   border: 2px solid #dca060;
   box-shadow: 0 4px 15px rgba(220, 160, 96, 0.2);
 }
@@ -37,29 +40,29 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex: 1;
-  min-width: 180px;
+  width: 100%;
 }
 
 .filter-group label {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   color: #dca060;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
 }
 
 .filter-select {
   background-color: #302e2d;
   border: 2px solid #dca060;
   color: #e5e1da;
-  padding: 12px 15px;
-  border-radius: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
   outline: none;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
+  width: 100%;
 }
 
 .filter-select:hover {
@@ -78,15 +81,15 @@ body {
   background-color: #dca060;
   color: #1a1a1a;
   border: 2px solid #dca060;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 700;
-  align-self: flex-end;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  width: 100%;
 }
 
 .reset-filters-btn:hover {
@@ -113,14 +116,15 @@ body {
   background-color: #4a4847;
   color: #dca060;
   border: 2px solid #dca060;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  width: 100%;
 }
 
 .favorites-btn:hover {
@@ -142,12 +146,13 @@ body {
   background-color: #302e2d;
   border: 2px solid #dca060;
   color: #e5e1da;
-  padding: 12px 20px;
-  border-radius: 25px;
+  padding: 8px 14px;
+  border-radius: 20px;
   outline: none;
   transition: all 0.3s;
-  font-size: 15px;
-  width: 400px;
+  font-size: 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .search-input:focus {
@@ -161,7 +166,7 @@ body {
 }
 
 .card {
-  width: auto; 
+  width: auto;
   margin: 0; 
   background-color: #3d3b3a;
   border-radius: 12px;
@@ -183,33 +188,35 @@ body {
 
 .card-image {
   width: 100%;
-  height: 250px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card-content {
-  padding: 16px;
+  padding: 10px;
 }
 
 .card-title {
-  margin: 0 0 8px 0;
-  font-size: 1.25rem;
+  margin: 0 0 6px 0;
+  font-size: 1rem;
   color: #e5e1da;
 }
 
 .card-category {
   display: inline-block;
   background: #f1f5f9;
-  padding: 4px 8px;
+  padding: 3px 6px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   color: #64748b;
 }
 
 .cocktail-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 25px;
+  grid-template-columns: 1fr;
+  gap: 12px;
   box-sizing: border-box;
 }
 
@@ -249,21 +256,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-top: 40px;
-  padding: 30px 0;
+  gap: 8px;
+  margin-top: 25px;
+  padding: 15px 0;
+  flex-wrap: wrap;
 }
 
 .pagination-btn {
   background-color: #dca060;
   color: #1a1a1a;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 10px 14px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .pagination-btn:hover:not(:disabled) {
@@ -297,18 +305,24 @@ body {
 .pagination-info {
   color: #e5e1da;
   font-weight: 500;
-  font-size: 14px;
-  min-width: 120px;
+  font-size: 12px;
+  min-width: auto;
   text-align: center;
 }
 
 .no-results {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 15px;
   background-color: rgba(255, 255, 255, 0.03);
   border-radius: 12px;
   border: 1px dashed #4a4847;
-  margin: 40px 0;
+  margin: 30px 0;
+}
+
+.no-results p {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #dca060;
 }
 
 .no-results p {
@@ -317,7 +331,6 @@ body {
   color: #dca060;
 }
 
-/* Detail Card Modal */
 .detail-overlay {
   position: fixed;
   top: 0;
@@ -334,8 +347,8 @@ body {
 
 .detail-card {
   background-color: #3d3b39;
-  border-radius: 12px;
-  max-width: 550px;
+  border-radius: 10px;
+  max-width: 100%;
   width: 100%;
   max-height: 85vh;
   overflow-y: auto;
@@ -348,29 +361,38 @@ body {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: none;
-  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
   color: #e5e1da;
-  font-size: 24px;
-  cursor: pointer;
-  width: 36px;
-  height: 36px;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 21px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   z-index: 10;
-  transition: color 0.2s;
+  transition: all 0.2s;
+  outline: none;
 }
 
 .detail-close-btn:hover {
-  color: #dca060;
+  background-color: rgba(220, 160, 96, 0.85);
+  color: #1a1a1a;
+  border-color: #dca060;
+}
+
+.detail-close-btn:focus {
+  outline: 2px solid rgba(220, 160, 96, 0.8);
+  outline-offset: 2px;
 }
 
 .detail-image-section {
   width: 100%;
-  height: 350px;
+  height: 220px;
   overflow: hidden;
-  border-radius: 12px 12px 0 0;
+  border-radius: 10px 10px 0 0;
   background-color: #302e2d;
   display: flex;
   align-items: center;
@@ -385,19 +407,19 @@ body {
 }
 
 .detail-body {
-  padding: 28px;
+  padding: 16px;
 }
 
 .detail-title {
-  font-size: 24px;
-  margin: 0 0 16px 0;
+  font-size: 18px;
+  margin: 0 0 10px 0;
   color: #dca060;
 }
 
 .detail-meta {
   display: flex;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 6px;
+  margin-bottom: 14px;
   flex-wrap: wrap;
 }
 
@@ -405,19 +427,19 @@ body {
 .detail-type,
 .detail-glass {
   background-color: #302e2d;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 11px;
   border: 1px solid #4a4847;
 }
 
 .detail-ingredients {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .detail-ingredients h3 {
-  font-size: 16px;
-  margin: 0 0 12px 0;
+  font-size: 13px;
+  margin: 0 0 8px 0;
   color: #dca060;
 }
 
@@ -434,9 +456,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 12px;
+  padding: 6px 8px;
   border-bottom: 1px solid #4a4847;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .detail-ingredients li:last-child {
@@ -446,35 +468,35 @@ body {
 .ing-amount {
   color: #dca060;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .detail-instructions {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .detail-instructions h3 {
-  font-size: 16px;
-  margin: 0 0 12px 0;
+  font-size: 13px;
+  margin: 0 0 8px 0;
   color: #dca060;
 }
 
 .detail-instructions p {
   margin: 0;
-  line-height: 1.6;
-  font-size: 13px;
+  line-height: 1.4;
+  font-size: 11px;
   color: #e5e1da;
 }
 
 .detail-fav-btn {
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   background-color: #dca060;
   color: #1a1a1a;
   border: none;
   border-radius: 6px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
   transition: background-color 0.2s;
 }
@@ -485,4 +507,448 @@ body {
 
 .detail-fav-btn.active {
   background-color: #e74c3c;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 15px 15px 35px 15px;
+  }
+
+  .header {
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+
+  .filters {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .filter-group {
+    flex: 1;
+    min-width: 160px;
+    width: auto;
+  }
+
+  .filter-select {
+    width: auto;
+    padding: 10px 14px;
+  }
+
+  .search-input {
+    width: auto;
+    padding: 10px 18px;
+    min-width: 250px;
+  }
+
+  .reset-filters-btn,
+  .favorites-btn {
+    width: auto;
+    padding: 10px 18px;
+  }
+
+  .cocktail-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .pagination {
+    gap: 15px;
+    margin-top: 35px;
+    padding: 25px 0;
+  }
+
+  .pagination-btn {
+    padding: 9px 15px;
+    font-size: 13px;
+  }
+
+  .pagination-info {
+    font-size: 13px;
+  }
+
+  .detail-card {
+    max-width: 450px;
+  }
+
+  .detail-image-section {
+    height: 280px;
+  }
+
+  .detail-body {
+    padding: 24px;
+  }
+
+  .detail-title {
+    font-size: 22px;
+  }
+
+  .detail-instructions p {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 30px 25px 50px 25px;
+  }
+
+  .header {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .filters {
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .filter-group {
+    min-width: 170px;
+  }
+
+  .filter-select {
+    padding: 11px 15px;
+    font-size: 14px;
+  }
+
+  .filter-group label {
+    font-size: 13px;
+  }
+
+  .search-input {
+    min-width: 300px;
+    padding: 11px 20px;
+    font-size: 15px;
+  }
+
+  .reset-filters-btn,
+  .favorites-btn {
+    padding: 11px 20px;
+    font-size: 13px;
+  }
+
+  .cocktail-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    width: auto;
+  }
+
+  .card-image {
+    height: 210px;
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-category {
+    font-size: 12px;
+  }
+
+  .fav-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .pagination {
+    gap: 18px;
+    margin-top: 40px;
+    padding: 30px 0;
+  }
+
+  .pagination-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .pagination-info {
+    font-size: 14px;
+    min-width: 120px;
+  }
+
+  .no-results {
+    padding: 80px 30px;
+  }
+
+  .detail-card {
+    max-width: 550px;
+  }
+
+  .detail-image-section {
+    height: 320px;
+  }
+
+  .detail-body {
+    padding: 28px;
+  }
+
+  .detail-title {
+    font-size: 24px;
+    margin: 0 0 16px 0;
+  }
+
+  .detail-meta {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .detail-category,
+  .detail-type,
+  .detail-glass {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .detail-ingredients h3,
+  .detail-instructions h3 {
+    font-size: 16px;
+  }
+
+  .detail-ingredients li {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .ing-amount {
+    font-size: 12px;
+  }
+
+  .detail-instructions p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .detail-fav-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 25px 35px 50px 35px;
+    max-width: 1200px;
+  }
+
+  .header {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .filters {
+    gap: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .filter-group {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .filter-select {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .filter-group label {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+
+  .search-input {
+    min-width: 350px;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .reset-filters-btn,
+  .favorites-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+    width: auto;
+  }
+
+  .cocktail-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .card-image {
+    height: 230px;
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+    margin-bottom: 7px;
+  }
+
+  .card-category {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .fav-button {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .pagination {
+    gap: 15px;
+    margin-top: 25px;
+    padding: 20px 0;
+  }
+
+  .pagination-btn {
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+
+  .pagination-info {
+    font-size: 13px;
+    min-width: 120px;
+  }
+
+  .clear-btn {
+    padding: 5px 7px;
+  }
+
+  .no-results {
+    padding: 60px 30px;
+  }
+
+  .no-results p {
+    font-size: 15px;
+  }
+
+  .detail-overlay {
+    padding: 20px;
+  }
+
+  .detail-card {
+    max-width: 550px;
+    max-height: 85vh;
+  }
+
+  .detail-image-section {
+    height: 300px;
+  }
+
+  .detail-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #e5e1da;
+    border: 1px solid rgba(255,255,255,0.3);
+    font-size: 21px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s;
+    outline: none;
+  }
+
+  .detail-close-btn:hover {
+    background-color: rgba(220, 160, 96, 0.85);
+    color: #1a1a1a;
+    border-color: #dca060;
+  }
+
+  .detail-close-btn:focus {
+    outline: 2px solid rgba(220, 160, 96, 0.8);
+    outline-offset: 2px;
+  }
+
+  .detail-body {
+    padding: 24px;
+  }
+
+  .detail-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .detail-meta {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .detail-category,
+  .detail-type,
+  .detail-glass {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .detail-ingredients {
+    margin-bottom: 20px;
+  }
+
+  .detail-ingredients h3,
+  .detail-instructions h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .detail-ingredients li {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .ing-amount {
+    font-size: 11px;
+  }
+
+  .detail-instructions {
+    margin-bottom: 20px;
+  }
+
+  .detail-instructions p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .detail-fav-btn {
+    padding: 10px;
+    font-size: 13px;
+  }
 }
